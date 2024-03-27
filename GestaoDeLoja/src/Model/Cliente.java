@@ -1,19 +1,11 @@
 package Model;
 
-public class Cliente {
-	private int id;
-	private String nome, endereco;
+public final class Cliente extends Dados{
+	private String endereco;
 	private long telefone;
 	
-	public void adicionar() {
-		
+	public void compra() {
+
 	}
 	
-	public void editar() {
-		
-	}
-	
-	public void apagar() {
-		
-	}
 }

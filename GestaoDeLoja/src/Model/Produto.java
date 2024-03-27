@@ -1,29 +1,16 @@
 package Model;
 
-public class Produto {
-	private String nome, categotia;
+public final class Produto  extends Dados{
+	private String categotia;
 	private double preco;
-	private int id, quantidade;
+	private int  quantidade;
 	
 	public void adicionar() {
 	
 	}
 	
-	public void editar() {
-		id = id;
-		
-	}
-	
 	public void apagar() {
 		
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	public String getCategotia() {
@@ -40,14 +27,6 @@ public class Produto {
 
 	public void setPreco(double preco) {
 		this.preco = preco;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public int getQuantidade() {

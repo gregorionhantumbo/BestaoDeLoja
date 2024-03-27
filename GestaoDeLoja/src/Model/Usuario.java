@@ -4,11 +4,10 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Usuario {
-	private long id;
-	private String nome, userName, cargo;
+public final class Usuario extends Dados{
+	private String userName, cargo;
 	private boolean estado;
-	private Venda venda;
+	private Caixa venda;
 	private LocalDateTime dataHoraCriacao;
 	private LocalDateTime ultimoLoguin;
 	
@@ -16,14 +15,14 @@ public class Usuario {
 	Scanner scanner = new Scanner(System.in);
 	
 	public Usuario() {
-		this.id = id++;
+		this.setId(0);
 		this.cargo = "Caixa";
 		this.estado = false;
 	}
 	
 	public void perfil() {
-		System.out.println("Id: " + this.id);
-		System.out.println("Nome: " + this.nome);
+		System.out.println("Id: " + this.getId());
+		System.out.println("Nome:" + this.getNome());
 		System.out.println("Username: " + this.userName);
 		System.out.println("Cargo: " + this.cargo);
 		System.out.println("Estado: " + this.estado);
@@ -35,9 +34,6 @@ public class Usuario {
 		if(this.isEstado()) {
 			
 			//System.out.print("ID: ");
-			this.id += id;
-			System.out.println("Digite o seu nome: ");
-			this.nome = scanner.nextLine();
 			System.out.println("Digite o seu username");
 			this.userName = scanner.nextLine();
 		}else {
