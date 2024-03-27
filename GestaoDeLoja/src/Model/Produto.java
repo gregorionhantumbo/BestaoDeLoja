@@ -6,7 +6,7 @@ public final class Produto  extends Dados{
 	private int  quantidade;
 	
 	public void adicionar() {
-	
+		this.setNome(null);
 	}
 	
 	public void apagar() {
